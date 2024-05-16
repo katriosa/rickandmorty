@@ -1,5 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
+import FetchData from "./components/FetchData.vue";
 </script>
 
 <template>
@@ -13,6 +14,7 @@ import { RouterLink, RouterView } from "vue-router";
     </nav>
   </div>
   <RouterView />
+  <FetchData />
 </template>
 
 <style scoped>
