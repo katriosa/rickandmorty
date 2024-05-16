@@ -1,21 +1,14 @@
-<script setup>
-import { RouterLink, RouterView } from "vue-router";
-import FetchData from "./components/FetchData.vue";
-</script>
-
 <template>
   <header>
     <h1 class="header-title">Rick and Morty Characters</h1>
   </header>
-  <div class="wrapper">
-    <nav>
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/page2">Next page</RouterLink>
-    </nav>
-  </div>
-  <RouterView />
+  <div class="wrapper"></div>
   <FetchData />
 </template>
+
+<script setup>
+import FetchData from "./components/FetchData.vue";
+</script>
 
 <style scoped>
 header {
