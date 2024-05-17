@@ -1,48 +1,9 @@
 <template>
-  <header>
-    <h1 class="header-title">Rick and Morty Characters</h1>
-  </header>
-  <div class="wrapper"></div>
-  <FetchData />
+  <MainHeader />
+  <PaginatedCardsList />
 </template>
 
 <script setup>
-import FetchData from "./components/FetchData.vue";
+import PaginatedCardsList from "./components/PaginatedCardsList.vue";
+import MainHeader from "./components/MainHeader.vue";
 </script>
-
-<style scoped>
-header {
-  text-align: center;
-  container-type: inline-size;
-}
-.header-title {
-  font-weight: 500;
-  font-size: clamp(1rem, 3.5cqi, 4rem);
-  color: var(--color-heading-accent);
-}
-
-nav {
-  width: 100%;
-  margin-top: 2rem;
-  font-size: 1rem;
-  padding: 1rem 0;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-</style>
