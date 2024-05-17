@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="button-container">
     <button @click="goToPrevPage" :disabled="!prevPageLink">Prev</button>
-    <span>{{ currentPage }} / {{ totalPages }}</span>
+    <span class="pagination-info">{{ currentPage }} / {{ totalPages }}</span>
     <button @click="goToNextPage" :disabled="!nextPageLink">Next</button>
   </div>
 </template>
@@ -45,3 +45,17 @@ const goToNextPage = () => {
   }
 };
 </script>
+
+<style scoped>
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4cqi;
+  margin-top: 3rem;
+}
+
+.pagination-info {
+  font-size: clamp(1rem, 1.5cqi, 3rem);
+}
+</style>

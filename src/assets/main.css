@@ -6,19 +6,27 @@
   font-weight: normal;
 }
 
-a {
-  text-decoration: none;
-  color: var(--color-text-accent);
-  transition: 0.4s;
-  padding: 3px;
-}
-
 li {
   list-style: none;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: var(--color-link-hover);
-  }
+button {
+  padding: 0.5rem 2cqi;
+  font-size: clamp(1rem, 1.5cqi, 3rem);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  background-color: transparent;
+}
+button:disabled {
+  background-color: transparent;
+  border: none;
+  opacity: 0.5;
+}
+button:hover {
+  background-color: var(--color-link-hover);
+  cursor: pointer;
+}
+button:disabled:hover {
+  background-color: inherit;
+  cursor: auto;
 }

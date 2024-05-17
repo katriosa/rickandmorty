@@ -9,6 +9,11 @@
         @pageChange="fetchPage"
       />
       <CardsList :cards="characterData.results" />
+      <PaginationControls
+        :paginationInfo="characterData.info"
+        :currentPage="currentPage"
+        @pageChange="fetchPage"
+      />
     </div>
   </div>
 </template>
