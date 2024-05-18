@@ -1,17 +1,21 @@
 <template>
   <ul class="list">
-    <li class="card-container" v-for="item in cards" :key="item.id">
-      <CharacterCard :characterData="item" />
+    <li class="card-container" v-for="(item, index) in cards" :key="item.id">
+      <CharacterCard
+        :characterData="item"
+        v-if="episodes[index]"
+        :episodeName="episodes[index].name"
+      />
     </li>
   </ul>
 </template>
 
 <script setup>
-import { defineProps } from "vue";
 import CharacterCard from "./characterCard/CharacterCard.vue";
 
 const props = defineProps({
   cards: Array,
+  episodes: Array,
 });
 </script>
 

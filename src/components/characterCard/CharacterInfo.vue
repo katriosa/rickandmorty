@@ -13,13 +13,12 @@
     </div>
     <div>
       <h4>First seen in:</h4>
-      <p class="highlighted-info">{{ numEpisode }}</p>
+      <p class="highlighted-info">{{ characterEpisode }}</p>
     </div>
   </div>
 </template>
 
 <script setup>
-import { defineProps } from "vue";
 import { getStatusIcon } from "../../utils/getStatusIcon.js";
 
 const props = defineProps({
@@ -27,11 +26,8 @@ const props = defineProps({
   characterStatus: String,
   characterSpesies: String,
   characterLocation: String,
-  characterEpisodes: Array,
+  characterEpisode: String,
 });
-
-const episodeURl = props.characterEpisodes[0];
-const numEpisode = episodeURl.split("/").slice(-2).join("/");
 
 const statusIcon = getStatusIcon(props.characterStatus);
 </script>

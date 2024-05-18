@@ -6,18 +6,18 @@
       :characterStatus="characterData.status"
       :characterSpesies="characterData.species"
       :characterLocation="characterData.location.name"
-      :characterEpisodes="characterData.episode"
+      :characterEpisode="episodeName"
     />
   </div>
 </template>
 
 <script setup>
-import { defineProps } from "vue";
 import CharacterImage from "./CharacterImage.vue";
 import CharacterInfo from "./CharacterInfo.vue";
 
 const props = defineProps({
   characterData: Object,
+  episodeName: String,
 });
 </script>
 
