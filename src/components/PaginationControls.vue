@@ -35,12 +35,20 @@ watch(
 
 const goToPrevPage = () => {
   if (prevPageLink.value) {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
     emitPageChange("page-change", props.currentPage - 1);
   }
 };
 
 const goToNextPage = () => {
   if (nextPageLink.value) {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
     emitPageChange("page-change", props.currentPage + 1);
   }
 };
