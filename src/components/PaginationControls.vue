@@ -34,13 +34,13 @@ watch(
 );
 
 const goToPrevPage = () => {
-  if (prevPageLink) {
+  if (prevPageLink.value) {
     emitPageChange("page-change", props.currentPage - 1);
   }
 };
 
 const goToNextPage = () => {
-  if (nextPageLink) {
+  if (nextPageLink.value) {
     emitPageChange("page-change", props.currentPage + 1);
   }
 };
