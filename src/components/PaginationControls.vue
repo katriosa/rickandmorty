@@ -56,6 +56,6 @@ const goToNextPage = () => {
 }
 
 .pagination-info {
-  font-size: clamp(1rem, 1.5cqi, 3rem);
+  font-size: clamp(1rem, 1cqi, 2rem);
 }
 </style>

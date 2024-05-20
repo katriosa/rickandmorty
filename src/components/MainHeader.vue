@@ -11,7 +11,7 @@ header {
 }
 .header-title {
   font-weight: 500;
-  font-size: clamp(1.5rem, 3.5cqi, 4rem);
+  font-size: clamp(1.5rem, 3cqi, 3rem);
   color: var(--color-heading-accent);
 }
 </style>

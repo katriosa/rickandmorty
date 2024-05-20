@@ -12,7 +12,7 @@ li {
 
 button {
   padding: 0.5rem 2cqi;
-  font-size: clamp(1rem, 1.5cqi, 3rem);
+  font-size: clamp(1rem, 1cqi, 2rem);
   border: 1px solid var(--color-border);
   color: var(--color-text);
   background-color: transparent;
